@@ -1,0 +1,25 @@
+body{
+    background-color: #262626;
+    color: rgb(177, 177, 177);
+}
+
+li{
+    list-style-type: none;
+}
+
+.symbol{
+    font-size:2em;
+}
+
+.priceUsd{
+    font-size:1.2em;
+    color: #e69034;
+}
+
+.red{
+    color: #c00000;
+}
+
+.green{
+    color: #009141;
+}
