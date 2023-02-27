@@ -5,6 +5,7 @@ import { Grid, Box } from '@mui/material';
 import { blueGrey } from '@mui/material/colors'
 
 
+/*responsive grid container for the entire app*/
 const App = () => {
     const [coins, setCoins] = useState([])
     const maincolor = blueGrey[900]
@@ -43,14 +44,13 @@ const App = () => {
                                     '&:hover': { backgroundColor: secondarycolor }
                                 }}
                                 paddingTop={0.5}
-                            >
+                            > 
 
                                 <ul>
                                     <li key={coin.id} className="coinlist" />
                                     <li className='symbol'>{coin.symbol}</li>
                                     <li className='priceUsd'>${coin.priceUsd.slice(0, 15)}</li>
 
-                                
                                 {/*nested responsive grid container for 24hr change and volume*/}
                                 <Grid container paddingTop={1}>
                                     <Grid item xs={6}>
@@ -67,8 +67,8 @@ const App = () => {
                                         }
                                         
                                     </Grid>
-                                    <Grid item xs={6}>
-                                    <div>{coin.volumeUsd24Hr.slice(0, 10)}</div>
+                                    <Grid item xs={6} overflow="hidden">
+                                    <div>{coin.volumeUsd24Hr.slice(0, 12)}</div>
                                     </Grid>
                                 </Grid>
                                 </ul>
